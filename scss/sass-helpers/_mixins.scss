@@ -1,0 +1,40 @@
+// Mixins
+
+// MQ Breakpoint mixin
+$breakpoints: (
+  'small'         : '(min-width: 48em)',
+  'medium'        : '(min-width: 60em)',
+  'medium-device' : '(min-device-width: 768px) and (max-device-width: 1024px)',
+  'medium-range'  : '(min-width: 48em) and (max-width: 64em)',
+  'large'         : '(min-width: 80em)'
+);
+  
+@mixin respond-to($name, $push: false) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media only screen and #{map-get($breakpoints, $name)} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  // But $push is defined
+  @else if $push != false {
+    // Add the new breakpoint to the map
+    $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
+    // And re-call the mixin normally
+    @include respond-to($name) {
+      @content;
+    }
+  }
+  
+  // If the key doesn't exist in the map
+  // And there is no push
+  @else {
+    // Just warn the user
+    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+        + "Please make sure it is defined in `$breakpoints` map. "
+        + "Or pass the media query as a second parameter to add it to the map.";
+  }
+}
