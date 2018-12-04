@@ -1,0 +1,22 @@
+/* Sections
+   ----------------------------------------------------*/
+
+.section {
+    padding: 0 2em;
+    text-align: center;
+
+    &.mod-block {
+        background-color: $color-tertiary;
+        padding: 2em;
+    }
+}
+
+.section__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .section__header {
+        color: $color-primary;
+        font-weight: 700;
+    }

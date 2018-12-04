@@ -8,6 +8,12 @@
 @import 'sass-helpers/mixins';
 
 @import 'base/normalize';
+@import 'base/base';
+@import 'base/animations';
+@import 'base/buttons';
 
-// @import 'layout/header';
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/sections';
+@import 'layout/portfolio';
 // @import 'layout/footer';

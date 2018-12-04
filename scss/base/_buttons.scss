@@ -1,0 +1,40 @@
+/*
+ * Buttons
+ */
+
+ .btn {
+  display: inline-block;
+
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 1em;
+  padding: 0 25px;
+
+  -webkit-transition: .2s linear;
+          transition: .2s linear;
+          
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $color-white;
+  border: none;
+  border-radius: 7px;
+  background-color: $color-primary;
+
+  -webkit-appearance: none;
+  cursor: pointer;
+
+}
+
+.btn.mod-ghost {
+  color: $color-secondary;
+  font-weight: 700;
+  border: 2px solid $color-secondary;
+  background-color: transparent;
+
+  &:hover {
+      color: $color-white;
+      border-color: $color-secondary;
+      background-color: $color-secondary;
+  }
+}
