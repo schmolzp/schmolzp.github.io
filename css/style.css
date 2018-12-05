@@ -630,8 +630,9 @@ section > div {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
   padding: 0 2em;
   height: 225px;
@@ -639,6 +640,10 @@ section > div {
   .main-nav.is-open .main-nav__list {
     margin: 0;
     height: 100vh; }
+  @media only screen and (min-width: 60em) {
+    .main-nav__list {
+      -ms-flex-pack: distribute;
+      justify-content: space-around; } }
 
 .main-nav__list-item {
   text-transform: uppercase;
@@ -653,6 +658,7 @@ section > div {
     animation-delay: .95s; }
   .main-nav.is-open .main-nav__list-item {
     font-size: 30px;
+    margin-bottom: 1em;
     -webkit-animation-delay: .15s;
     animation-delay: .15s; }
     .main-nav.is-open .main-nav__list-item:nth-child(2) {
