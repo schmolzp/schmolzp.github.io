@@ -56,3 +56,9 @@
     font-weight: 700;
     font-size: calc(32px + (75 - 32)*(100vw - 320px)/(1200 - 320));
 }
+
+@include respond-to(medium) {
+    .hamburger {
+        display: none;
+    }
+}

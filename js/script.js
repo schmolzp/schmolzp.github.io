@@ -1,9 +1,10 @@
 /* Author: Peter Schmolze */
 $(document).ready(function() {
-    var movementStrength = 50,
+    var movementStrength = 75,
         height = movementStrength / $(window).height(),
         width = movementStrength / $(window).width(),
         $photo = $('.intro');
+        
     $photo.mousemove(function(e){
         var pageX = e.pageX - ($(window).width() / 2),
             pageY = e.pageY - ($(window).height() / 2),
@@ -22,10 +23,15 @@ $(document).ready(function() {
     });
 
     // Get Nav height and center nav position
-    var halfIntro = $('.intro').height() / 2,
-        halfNav = $('.main-nav').height() / 2,
-        newHeight = halfIntro - halfNav;
-    $('.main-nav').css('top', newHeight + 'px');
+    var windowWidth = $(window).width();
+    $(window).on('resize', function() {
+        if( windowWidth > 960 ) {
+            var halfIntro = $('.intro').height() / 2,
+                halfNav = $('.main-nav').height() / 2,
+                newHeight = halfIntro - halfNav;
+            $('.main-nav').css('top', newHeight + 'px');
+        }
+    }).resize();
 
     /* Smooth scroll to anchor href and bring in back to top button */
     $.fn.isOnScreen = function(){
@@ -48,9 +54,12 @@ $(document).ready(function() {
 
     $mainNavLinks.on("click", function(e) {
         e.preventDefault();
-        $mainNavLinks.removeClass('is-active');
+        $mainNavLinks.removeClass('is-active')
+                      .closest('.main-nav')
+                      .removeClass('is-open');
+        $('.hamburger').toggleClass('is-active');
         $(this).addClass('is-active');
-        
+
         scrollTo( $(this) );
     });
 
@@ -58,6 +67,7 @@ $(document).ready(function() {
         scrollTo( $(this) );
     });
 
+    // Add is-active class on scroll to proper section
     $(window).scroll(function() {
         var scrollDistance = $(window).scrollTop();
         $('.js-anchor').each(function(i) {
@@ -70,9 +80,16 @@ $(document).ready(function() {
 		});
     }).scroll();
     
+    // Toggle mobile nav
+    $('.hamburger').on('click', function() {
+        $(this).toggleClass('is-active');
+        $('.main-nav').toggleClass('is-open');
+    });
+
+
     function scrollTo(elem) {
         $('html, body').animate({
-            scrollTop: $( elem.attr('href') ).offset().top
+            scrollTop: $( elem.attr('href') ).offset().top + 5
         }, 1000);
     }
 });
