@@ -668,7 +668,8 @@ section > div {
 
 .main-nav__list-item {
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  opacity: 0; }
   .main-nav.is-animating .main-nav__list-item {
     -webkit-animation: slide-in-right 0.75s 0.65s cubic-bezier(0.77, 0.2, 0.05, 1) both;
     animation: slide-in-right 0.75s 0.65s cubic-bezier(0.77, 0.2, 0.05, 1) both; }
