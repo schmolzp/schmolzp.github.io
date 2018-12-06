@@ -570,7 +570,7 @@ section > div {
    ----------------------------------------------------*/
 .main-nav {
   position: fixed;
-  top: 180px;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 110vh;
@@ -626,7 +626,7 @@ section > div {
     .main-nav {
       visibility: visible;
       opacity: 1;
-      top: auto;
+      top: 180px;
       left: auto;
       width: auto;
       height: auto; }
