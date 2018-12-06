@@ -1,6 +1,6 @@
 /* Author: Peter Schmolze */
 $(document).ready(function() {
-    var movementStrength = 50,
+    var movementStrength = 75,
         height = movementStrength / $(window).height(),
         width = movementStrength / $(window).width(),
         $photo = $('.intro');
@@ -23,13 +23,12 @@ $(document).ready(function() {
     });
 
     // Get Nav height and center nav position
-    var windowWidth = $(window).width(),
-        halfIntro = $('.intro').height() / 2,
-        halfNav = $('.main-nav').height() / 2,
-        newHeight = halfIntro - halfNav;
-        $('.main-nav').css('top', newHeight + 'px');
+    var windowWidth = $(window).width();
     $(window).on('resize', function() {
         if( windowWidth > 960 ) {
+            var halfIntro = $('.intro').outerHeight() / 2,
+                halfNav = $('.main-nav').outerHeight() / 2,
+                newHeight = halfIntro - halfNav;
             $('.main-nav').css('top', newHeight + 'px');
         }
     }).resize();
