@@ -36,7 +36,7 @@
     z-index: 1;
     
     @include respond-to(small) {
-        margin: 8em 0;
+        margin: 6em 0;
     }
 
     p {

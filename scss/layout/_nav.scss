@@ -49,7 +49,7 @@
         
         &:after {
             -webkit-animation: growLine .5s ease-in-out both;
-                animation: growLine .5s ease-in-out both;
+                    animation: growLine .5s ease-in-out both;
         }
 
         @include respond-to(medium) {

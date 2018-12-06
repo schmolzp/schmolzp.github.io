@@ -719,7 +719,7 @@ section > div {
   z-index: 1; }
   @media only screen and (min-width: 48em) {
     .intro__content {
-      margin: 8em 0; } }
+      margin: 6em 0; } }
   .intro__content p {
     max-width: 600px;
     font-size: 22px;
