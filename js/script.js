@@ -23,9 +23,9 @@ $(document).ready(function() {
     });
 
     // Get Nav height and center nav position
-    var windowWidth = $(window).width();
     $(window).on('resize', function() {
-        var halfIntro = $('.intro').height() / 2,
+        var indowWidth = $(window).width(),
+            halfIntro = $('.intro').height() / 2,
             halfNav = $('.main-nav').height() / 2,
             newHeight = halfIntro - halfNav;
         if( windowWidth > 960 ) {
