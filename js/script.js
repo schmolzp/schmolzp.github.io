@@ -1,6 +1,6 @@
 /* Author: Peter Schmolze */
 $(document).ready(function() {
-    var movementStrength = 75,
+    var movementStrength = 50,
         height = movementStrength / $(window).height(),
         width = movementStrength / $(window).width(),
         $photo = $('.intro');
@@ -27,6 +27,7 @@ $(document).ready(function() {
         halfIntro = $('.intro').height() / 2,
         halfNav = $('.main-nav').height() / 2,
         newHeight = halfIntro - halfNav;
+        $('.main-nav').css('top', newHeight + 'px');
     $(window).on('resize', function() {
         if( windowWidth > 960 ) {
             $('.main-nav').css('top', newHeight + 'px');
