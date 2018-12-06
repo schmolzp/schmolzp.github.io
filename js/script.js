@@ -23,11 +23,11 @@ $(document).ready(function() {
     });
 
     // Get Nav height and center nav position
+    var halfIntro = $('.intro').height() / 2,
+        halfNav = $('.main-nav').height() / 2,
+        newHeight = halfIntro - halfNav;
     $(window).on('resize, load', function() {
-        var windowWidth = $(window).width(),
-            halfIntro = $('.intro').height() / 2,
-            halfNav = $('.main-nav').height() / 2,
-            newHeight = halfIntro - halfNav;
+        var windowWidth = $(window).width();
         if( windowWidth > 960 ) {
             $('.main-nav').css('top', newHeight + 'px');
         }
