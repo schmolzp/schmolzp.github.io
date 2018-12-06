@@ -570,7 +570,7 @@ section > div {
    ----------------------------------------------------*/
 .main-nav {
   position: fixed;
-  top: 0;
+  top: 180px;
   left: 0;
   width: 100vw;
   height: 110vh;
@@ -584,7 +584,7 @@ section > div {
   background-color: rgba(0, 52, 127, 0);
   -webkit-transition: .3s;
   transition: .3s; }
-  .main-nav.is-animating:after {
+  .main-nav:after {
     content: '';
     position: absolute;
     top: 0;
@@ -592,10 +592,10 @@ section > div {
     height: 100%;
     background-color: #fd4345; }
     @media only screen and (min-width: 60em) {
-      .main-nav.is-animating:after {
+      .main-nav:after {
         right: 0;
-        -webkit-animation: growLine .5s ease-in-out both;
-        animation: growLine .5s ease-in-out both; } }
+        -webkit-animation: growLine .5s .5s ease-in-out both;
+        animation: growLine .5s .5s ease-in-out both; } }
   .main-nav.is-open {
     visibility: visible;
     opacity: 1; }
