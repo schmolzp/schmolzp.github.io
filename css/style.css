@@ -594,8 +594,8 @@ section > div {
     @media only screen and (min-width: 60em) {
       .main-nav.is-animating:after {
         right: 0;
-        -webkit-animation: growLine .5s .5s ease-in-out both;
-        animation: growLine .5s .5s ease-in-out both; } }
+        -webkit-animation: growLine .5s ease-in-out both;
+        animation: growLine .5s ease-in-out both; } }
   .main-nav.is-open {
     visibility: visible;
     opacity: 1; }
