@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     // Add class when first section is in center of viewport
     $(window).scroll(function() {
-        if ( $(window).scrollTop() > $('.intro').height() / 2 ) {
+        if ( $(window).scrollTop() > $('.intro').height() / 2.75 ) {
             $('.main-nav').addClass("color-has-changed");
         } else {
             $('.main-nav').removeClass("color-has-changed");
@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     // Get Nav height and center nav position
-    $(window).on('resize', function() {
+    $(window).on('resize, load', function() {
         var windowWidth = $(window).width(),
             halfIntro = $('.intro').height() / 2,
             halfNav = $('.main-nav').height() / 2,
@@ -78,7 +78,7 @@ $(document).ready(function() {
                     $mainNavLinks.removeClass('is-active');
                 }
 		});
-    }).scroll();
+    });
     
     // Toggle mobile nav
     $('.hamburger').on('click', function() {
