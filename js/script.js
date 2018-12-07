@@ -18,9 +18,9 @@ $(document).ready(function() {
     // Add class when first section is in center of viewport
     $(window).scroll(function() {
         if ( $(window).scrollTop() > $('.intro').height() / 2.75 ) {
-            $('.main-nav').addClass("color-has-changed");
+            $('.main-nav, .logo').addClass("color-has-changed");
         } else {
-            $('.main-nav').removeClass("color-has-changed");
+            $('.main-nav, .logo').removeClass("color-has-changed");
         }
     });
 
@@ -65,7 +65,7 @@ $(document).ready(function() {
         scrollTo( $(this) );
     });
 
-    $('.intro .btn').on('click', function() {
+    $('.intro .btn, .logo').on('click', function() {
         scrollTo( $(this) );
     });
 

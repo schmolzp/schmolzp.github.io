@@ -762,7 +762,7 @@ section > div {
     background-attachment: fixed; }
 
 .intro__content {
-  margin: 5em 0;
+  margin: 6em 0 4em;
   z-index: 1; }
   @media only screen and (min-width: 48em) {
     .intro__content {
@@ -794,18 +794,28 @@ section > div {
   display: inline-block;
   z-index: 10;
   top: 15px;
-  left: 20px; }
+  left: 20px;
+  -webkit-transition: .25s; }
+  .logo.color-has-changed circle {
+    fill: #00347F; }
+  .logo.color-has-changed path {
+    stroke: #fd4345; }
   .logo svg {
     width: 55px;
     height: 55px; }
     .logo svg:hover path {
       stroke-dasharray: 1000;
-      -webkit-animation: dash 1.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
-      animation: dash 1.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
+      -webkit-animation: dash 1s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
+      animation: dash 1s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
+    .logo svg circle {
+      -webkit-transition: .25s;
+      transition: .25s; }
     .logo svg path {
       stroke-dasharray: 1000;
       -webkit-animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
-      animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
+      animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
+      -webkit-transition: .25s;
+      transition: .25s; }
       @media only screen and (min-width: 48em) {
         .logo svg path {
           -webkit-animation: none;
