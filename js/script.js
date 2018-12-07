@@ -5,13 +5,15 @@ $(document).ready(function() {
         width = movementStrength / $(window).width(),
         $photo = $('.intro');
         
-    $photo.mousemove(function(e){
-        var pageX = e.pageX - ($(window).width() / 2),
-            pageY = e.pageY - ($(window).height() / 2),
-            newvalueX = width * pageX * -1 - 25,
-            newvalueY = height * pageY * -1 - 50;
-        $photo.css("background-position", newvalueX+"px     "+newvalueY+"px");
-    });
+    if( $('html').hasClass('no-touch') ) {
+        $photo.mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2),
+                pageY = e.pageY - ($(window).height() / 2),
+                newvalueX = width * pageX * -1 - 25,
+                newvalueY = height * pageY * -1 - 50;
+            $photo.css("background-position", newvalueX+"px     "+newvalueY+"px");
+        });
+    }
 
     // Add class when first section is in center of viewport
     $(window).scroll(function() {

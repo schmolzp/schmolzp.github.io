@@ -431,6 +431,10 @@ template {
 [hidden] {
   display: none; }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
   font-size: 1em; }
 
@@ -438,8 +442,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 1.45;
-  color: #000;
-  height: 10000px; }
+  color: #000; }
 
 p {
   margin-bottom: 1.3em; }
@@ -535,6 +538,16 @@ section > div {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000; }
+  to {
+    stroke-dashoffset: 0; } }
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000; }
+  to {
+    stroke-dashoffset: 0; } }
 /*
  * Buttons
  */
@@ -625,6 +638,16 @@ section > div {
       background-color: #00347F; } }
   @media only screen and (min-width: 60em) {
     .main-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       visibility: visible;
       opacity: 1;
       top: auto;
@@ -656,7 +679,8 @@ section > div {
   justify-content: center;
   list-style: none;
   padding: 0 2em;
-  height: 300px;
+  margin: 0;
+  height: 350px;
   font-weight: 700; }
   .main-nav.is-open .main-nav__list {
     margin: 0;
@@ -742,7 +766,7 @@ section > div {
   z-index: 1; }
   @media only screen and (min-width: 48em) {
     .intro__content {
-      margin: 6em 0; } }
+      margin: 8em 0; } }
   .intro__content p {
     max-width: 600px;
     font-size: 22px;
@@ -763,6 +787,39 @@ section > div {
 @media only screen and (min-width: 60em) {
   .hamburger {
     display: none; } }
+/* Logo
+   ----------------------------------------------------*/
+.logo {
+  position: absolute;
+  display: inline-block;
+  z-index: 10;
+  top: 15px;
+  left: 20px; }
+  .logo svg {
+    width: 55px;
+    height: 55px; }
+    .logo svg:hover path {
+      stroke-dasharray: 1000;
+      -webkit-animation: dash 1s ease-out forwards;
+      animation: dash 1s ease-out forwards; }
+    .logo svg path {
+      stroke-dasharray: 1000;
+      -webkit-animation: dash 1s .5s ease-out forwards;
+      animation: dash 1s .5s ease-out forwards; }
+      @media only screen and (min-width: 48em) {
+        .logo svg path {
+          -webkit-animation: none;
+          animation: none; } }
+    @media only screen and (min-width: 48em) {
+      .logo svg {
+        position: fixed;
+        width: 75px;
+        height: 75px; } }
+  @media only screen and (min-width: 48em) {
+    .logo {
+      top: 25px;
+      left: 50px; } }
+
 /* Sections
    ----------------------------------------------------*/
 .section {
@@ -782,3 +839,17 @@ section > div {
 
 /* Porfolio
    ----------------------------------------------------*/
+/* Footer
+   ----------------------------------------------------*/
+.main-content {
+  margin-bottom: 400px;
+  -webkit-box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.2); }
+
+.section.mod-contact {
+  position: fixed;
+  width: 100%;
+  height: 400px;
+  background-color: #a3a3a3;
+  bottom: 0;
+  z-index: -1; }

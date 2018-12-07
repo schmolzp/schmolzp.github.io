@@ -1,148 +1,16 @@
 /* Footer
    ----------------------------------------------------*/
-
-#logo-footer {
-    background: rgb(87,0,8); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(87,0,8,1) 0%, rgba(115,0,10,1) 55%, rgba(115,0,10,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(87,0,8,1)), color-stop(55%,rgba(115,0,10,1)), color-stop(100%,rgba(115,0,10,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(87,0,8,1) 0%,rgba(115,0,10,1) 55%,rgba(115,0,10,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(87,0,8,1) 0%,rgba(115,0,10,1) 55%,rgba(115,0,10,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(87,0,8,1) 0%,rgba(115,0,10,1) 55%,rgba(115,0,10,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(87,0,8,1) 0%,rgba(115,0,10,1) 55%,rgba(115,0,10,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#570008', endColorstr='#73000a',GradientType=0 ); /* IE6-9 */
-    text-align:center;
-}
-    #logo-footer .logo {
-        background: url('../img/USC_Web_main.svg') no-repeat;
-        display: block;
-        width: 200px;
-        height: 114px;
-        margin: 15px auto 0;
-        
-        @include respond-to(small) {
-            background: url('../img/USC_Web_linear.svg') no-repeat;
-            width: 268px;
-            height: 53px;
-            margin: 25px 0;
-        }
-    }
-    .no-svg #logo-footer .logo { background-image: url('../img/USC_Web_main.png') }
-
-#logo-footer small {
-	font-size:.625em; /* 10px / 16px */
-	margin-bottom:5px;
-	border-right:solid 1px #FFF;
-	clear: both;
-}
-	#logo-footer small:last-child { border:none; }
-	#logo-footer, #logo-footer small a { color: #FFF; }
-
-.site-info-wrapper {
-    background-color: #000;
-    padding: 10px 0;
-    border-top: 1px solid #FFF;
-}
-    .site-info {
-        position: relative;
-        z-index: 1;
-    }
-
-.no-limits {
-	color:#FFF;
-	font-size: 1.3125em; /* 21px / 16px */
-	font-weight: 400;
-	font-family: Arvo, serif;
-
-    strong,
-    span { 
-        display: block; 
-        
-        @include respond-to(small) {
-            display: inline;
-        }
-    }
-    
-    @include respond-to(small) {
-        margin-top: 47px; 
-        float: right;
-    }
-    @include respond-to(medium-range) {
-        font-size: 1em; 
-        margin-top: 53px;
-    }
+.main-content {
+    margin-bottom: 400px;
+    -webkit-box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.2);
 }
 
-@include respond-to(small) {
-    #footerbg {
-        margin-top: 50px;
-        background: #000 url(../img/gates.png) no-repeat -400px bottom;
-        position: relative;
-        border-top: 3px black solid;
-    }
-
-    #footer-menu {
-        position: absolute;
-        right: 0;
-        top: -26px;
-        width: 70px;
-        color: #FFF;
-        border-radius: 10px 10px 0 0;
-        text-align: right;
-        padding-right: 15px;
-        padding-top: 4px;
-        font-size: 14px;
-        background-color: #000;
-        box-sizing: content-box;
-    }
-        #footer-menu .closed:before, #footer-menu .open:before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 10px;
-            width: 16px;
-            height: 16px;
-            background-image: url(../img/expand_sprite.svg);
-            background-repeat: no-repeat;
-        }
-            .no-svg #footer-menu .closed:before, .no-svg #footer-menu .open:before { background-image: url(../img/expand_sprite.png); }
-        #footer-menu .closed:before { background-position: 0px -83px; }
-        #footer-menu .open:before { background-position: 0px -109px; }
-
-    #sitemap {
-        margin-bottom: 15px;
-        padding-top: 50px;
-        float: left;
-        width: 100%;
-        color: #fff;
-    }
-        #sitemap h1 {
-            color: #FFF;
-            font-size: .875em; /* 14px / 16px */
-            font-weight: bold;
-            margin-bottom: 5px;
-            width: 100%;
-            padding: 5px 5px 7px 8px;
-            background-color:#73000a;
-            border-radius: 0 15px 0 0;
-        }
-        #sitemap ul { padding: 0 0 0 8px; margin: 10px 0 40px; }
-        #sitemap ul li {
-            font-size:.75em; /* 12px / 16px */
-            font-weight: 600;
-            margin-bottom: 7px;
-            padding-bottom: 5px;
-            line-height: 1.3em;
-            list-style:none;
-        }
-
-    .copyright  { float: left; }
-    .page-owner { float: right; }
-
-    .links {
-        padding-left: 10px;
-        margin-left: 10px;
-        margin-left: 0px;
-    }
-    .links a:link, .links a:visited { color:#FFF; }
-    .links a:hover { color:#d0da00; }
+.section.mod-contact {
+    position: fixed;
+    width: 100%;
+    height: 400px;
+    background-color: #a3a3a3;
+    bottom: 0;
+    z-index: -1;
 }

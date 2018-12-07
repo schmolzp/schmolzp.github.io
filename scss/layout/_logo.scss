@@ -1,0 +1,45 @@
+/* Logo
+   ----------------------------------------------------*/
+
+.logo {
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    top: 15px;
+    left: 20px;
+    
+    svg {
+        width: 55px;
+        height: 55px;
+
+        &:hover {
+            path {
+                stroke-dasharray: 1000;
+                -webkit-animation: dash 1s ease-out forwards;
+                        animation: dash 1s ease-out forwards;
+            }
+        }
+
+        path {
+            stroke-dasharray: 1000;
+            -webkit-animation: dash 1s .5s ease-out forwards;
+                    animation: dash 1s .5s ease-out forwards;
+
+            @include respond-to(small) {
+                -webkit-animation: none;
+                        animation: none;
+            }
+         }
+        
+        @include respond-to(small) {
+            position: fixed;
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    @include respond-to(small) {
+        top: 25px;
+        left: 50px;
+    }
+}

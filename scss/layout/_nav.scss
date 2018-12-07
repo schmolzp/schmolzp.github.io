@@ -18,19 +18,21 @@
     -webkit-transition: .3s;
             transition: .3s;
 
-    &.is-animating:after {
+    &:after {
         content: '';
         position: absolute;
         top: 0;
         width: 10px;
         height: 100%;
         background-color: $color-secondary;
+        -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+    }
 
-        @include respond-to(medium) {
-            right: 0;
-            -webkit-animation: growLine .5s .5s ease-in-out both;
-                    animation: growLine .5s .5s ease-in-out both;
-        }
+    &.is-animating:after {
+        right: 0;
+        -webkit-animation: growLine .5s .5s ease-in-out both;
+                animation: growLine .5s .5s ease-in-out both;
     }
 
     &.is-open {
@@ -74,6 +76,16 @@
         }
     }
     @include respond-to(medium) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         visibility: visible;
         opacity: 1;
         top: auto;
@@ -111,7 +123,8 @@
                 justify-content: center;
         list-style: none;
         padding: 0 2em;
-        height: 300px;
+        margin: 0;
+        height: 350px;
         font-weight: 700;
 
         .main-nav.is-open & {
@@ -127,17 +140,21 @@
         .main-nav__list-item {
             text-transform: uppercase;
             text-align: center;
-            -webkit-animation: slide-in-right .75s .65s cubic-bezier(0.77,0.2,0.05,1.0) both;
-                    animation: slide-in-right .75s .65s cubic-bezier(0.77,0.2,0.05,1.0) both;
+            opacity: 0;
 
-            &:nth-child(2) {
-                -webkit-animation-delay: .8s;
-                        animation-delay: .8s;
-            }
+            .main-nav.is-animating & {
+                -webkit-animation: slide-in-right .75s .65s cubic-bezier(0.77,0.2,0.05,1.0) both;
+                        animation: slide-in-right .75s .65s cubic-bezier(0.77,0.2,0.05,1.0) both;
 
-            &:nth-child(3) {
-                -webkit-animation-delay: .95s;
-                        animation-delay: .95s;
+                &:nth-child(2) {
+                    -webkit-animation-delay: .8s;
+                            animation-delay: .8s;
+                }
+
+                &:nth-child(3) {
+                    -webkit-animation-delay: .95s;
+                            animation-delay: .95s;
+                }
             }
 
             .main-nav.is-open & {
