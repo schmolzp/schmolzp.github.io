@@ -800,12 +800,12 @@ section > div {
     height: 55px; }
     .logo svg:hover path {
       stroke-dasharray: 1000;
-      -webkit-animation: dash 1s ease-out forwards;
-      animation: dash 1s ease-out forwards; }
+      -webkit-animation: dash 1.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
+      animation: dash 1.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
     .logo svg path {
       stroke-dasharray: 1000;
-      -webkit-animation: dash 1s .5s ease-out forwards;
-      animation: dash 1s .5s ease-out forwards; }
+      -webkit-animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
+      animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
       @media only screen and (min-width: 48em) {
         .logo svg path {
           -webkit-animation: none;
