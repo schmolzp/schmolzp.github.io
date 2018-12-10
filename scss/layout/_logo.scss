@@ -7,6 +7,17 @@
     z-index: 10;
     top: 15px;
     left: 20px;
+    -webkit-transition: .25s;
+
+    &.color-has-changed {
+
+        circle {
+            fill: $color-primary
+        }
+        path {
+            stroke: $color-secondary;
+        }
+    }
     
     svg {
         width: 55px;
@@ -15,15 +26,19 @@
         &:hover {
             path {
                 stroke-dasharray: 1000;
-                -webkit-animation: dash 1s ease-out forwards;
-                        animation: dash 1s ease-out forwards;
+                -webkit-animation: dash 1s cubic-bezier(.19,.54,.79,.91) forwards;
+                        animation: dash 1s cubic-bezier(.19,.54,.79,.91) forwards;
             }
         }
 
+        circle { -webkit-transition: .25s; transition: .25s; }
+
         path {
             stroke-dasharray: 1000;
-            -webkit-animation: dash 1s .5s ease-out forwards;
-                    animation: dash 1s .5s ease-out forwards;
+            -webkit-animation: dash 1.5s .5s cubic-bezier(.19,.54,.79,.91) forwards;
+                    animation: dash 1.5s .5s cubic-bezier(.19,.54,.79,.91) forwards;
+            -webkit-transition: .25s;
+            transition: .25s;
 
             @include respond-to(small) {
                 -webkit-animation: none;
@@ -32,13 +47,18 @@
          }
         
         @include respond-to(small) {
-            position: fixed;
+            // position: fixed;
             width: 75px;
             height: 75px;
         }
     }
 
     @include respond-to(small) {
+        &.is-fixed {
+            position: fixed;
+            -webkit-animation: fadeIn .5s ease-in forwards;
+                    animation: fadeIn .5s ease-in forwards;
+        }
         top: 25px;
         left: 50px;
     }
