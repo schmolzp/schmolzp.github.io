@@ -1,6 +1,6 @@
 /* Author: Peter Schmolze */
 $(document).ready(function() {
-    var movementStrength = 75,
+    var movementStrength = 50,
         height = movementStrength / $(window).height(),
         width = movementStrength / $(window).width(),
         $photo = $('.intro');
@@ -15,12 +15,21 @@ $(document).ready(function() {
         });
     }
 
+    // Initialize AOS
+    AOS.init();
+
     // Add class when first section is in center of viewport
-    $(window).scroll(function() {
+    $(window).on('scroll', function() {
         if ( $(window).scrollTop() > $('.intro').height() / 2.75 ) {
             $('.main-nav, .logo').addClass("color-has-changed");
         } else {
             $('.main-nav, .logo').removeClass("color-has-changed");
+        }
+
+        if( !$('.intro').isOnScreen() ) {
+            $('.logo').addClass('is-fixed');
+        } else {
+            $('.logo').removeClass('is-fixed');
         }
     });
 
@@ -31,7 +40,7 @@ $(document).ready(function() {
             halfNav = $('.main-nav').height() / 2,
             newHeight = halfIntro - halfNav;
         if( windowWidth > 960 ) {
-            $('.main-nav').css('top', newHeight + 'px').addClass('is-animating');
+            $('.main-nav').css('top', newHeight + 25 + 'px').addClass('is-animating');
         }
     }).resize();
 
