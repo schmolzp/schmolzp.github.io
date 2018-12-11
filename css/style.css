@@ -868,7 +868,7 @@ section > div {
     text-transform: uppercase; }
 
 .section__content {
-  max-width: 800px;
+  max-width: 825px;
   margin: 0 auto; }
 
 .section__header {
@@ -892,7 +892,7 @@ section > div {
   bottom: 0;
   z-index: -1; }
   .section.mod-contact h2 {
-    font-size: calc(18px + (30 - 18)*(100vw - 320px)/(1200 - 320));
+    font-size: calc(18px + (27 - 18)*(100vw - 320px)/(1200 - 320));
     color: #363636;
     text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5), 0px -1px 1px rgba(0, 0, 0, 0.75); }
   .section.mod-contact small {
@@ -902,7 +902,7 @@ section > div {
   .section.mod-contact a {
     text-decoration: none;
     color: #fd4345; }
-  .section.mod-contact ul {
+  .section.mod-contact .contact-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -911,21 +911,44 @@ section > div {
     justify-content: center;
     padding: 0;
     margin-bottom: 2em; }
-    .section.mod-contact ul li {
+    .section.mod-contact .contact-list li {
       list-style: none; }
-    .section.mod-contact ul a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      background-color: #fd4345;
-      width: 50px;
-      height: 50px;
-      padding: 10px;
-      margin-right: 1em;
-      border-radius: 50px; }
-    .section.mod-contact ul svg {
+    .section.mod-contact .contact-list svg {
       width: 100%;
       height: 100%; }
+
+.contact-list__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fd4345;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin-right: 1em;
+  border-radius: 50px;
+  -webkit-transition: .25s;
+  transition: .25s; }
+  .contact-list__link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: #00347F;
+    border-radius: 50px;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .25s;
+    transition: .25s; }
+  .contact-list__link:hover:after {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .contact-list__link:hover svg {
+    z-index: 10;
+    fill: #fd4345; }
 
 /* AOS
    ----------------------------------------------------*/
