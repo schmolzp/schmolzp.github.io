@@ -16,7 +16,7 @@ $(document).ready(function() {
     }
 
     // Initialize AOS
-    AOS.init();
+    // AOS.init();
 
     // Add class when first section is in center of viewport
     $(window).on('scroll', function() {
@@ -88,6 +88,11 @@ $(document).ready(function() {
 				} else if( $('.intro').isOnScreen() ) {
                     $mainNavLinks.removeClass('is-active');
                 }
+                
+                if($(window).scrollTop() + $(window).height() === $(document).height()) {
+                    $mainNavLinks.removeClass('is-active');
+                    $mainNavLinks.eq(i).addClass('is-active');
+                }
 		});
     });
     
@@ -99,8 +104,13 @@ $(document).ready(function() {
 
 
     function scrollTo(elem) {
-        $('html, body').animate({
-            scrollTop: $( elem.attr('href') ).offset().top + 5
-        }, 1000);
+        if( elem.hasClass('js-anchor-bottom') ) {
+            $('html, body').animate({scrollTop:$(document).height()}, 2000);
+            return false;
+        } else {
+            $('html, body').animate({
+                scrollTop: $( elem.attr('href') ).offset().top + 5
+            }, 1000);
+        }
     }
 });
