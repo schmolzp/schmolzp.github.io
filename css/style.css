@@ -784,7 +784,6 @@ section > div {
     background-attachment: fixed; }
 
 .intro__content {
-  margin: 6em 0 4em;
   z-index: 1; }
   @media only screen and (min-width: 48em) {
     .intro__content {
