@@ -567,7 +567,7 @@ section > div {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  color: #FFEFCA;
+  color: #FFF;
   border: none;
   border-radius: 50px;
   background-color: #00347F;
@@ -908,6 +908,8 @@ section > div {
   margin-bottom: 2em; }
 
 .project__title {
+  font-weight: 700;
+  color: #00347F;
   margin-bottom: .5em; }
 
 .project__text {
