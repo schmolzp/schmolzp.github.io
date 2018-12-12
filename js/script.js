@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     // Add class when first section is in center of viewport
     $(window).on('scroll', function() {
-        if( !$('.intro').isOnScreen() ) {
+        if( !$('.intro').isOnScreen() && $('.logo').not('.is-fixed') ) {
             $('.logo').addClass('is-fixed');
         } else {
             $('.logo').removeClass('is-fixed');

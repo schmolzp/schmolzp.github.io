@@ -786,7 +786,7 @@ nav ul {
     height: 100%; }
   @media only screen and (min-width: 48em) {
     .intro {
-      height: auto; } }
+      height: 65vh; } }
   .no-touch .intro {
     background-attachment: fixed; }
 
@@ -822,8 +822,7 @@ nav ul {
   display: inline-block;
   z-index: 10;
   top: 15px;
-  left: 20px;
-  -webkit-transition: .25s; }
+  left: 20px; }
   .logo svg {
     width: 55px;
     height: 55px; }
@@ -831,15 +830,10 @@ nav ul {
       stroke-dasharray: 1000;
       -webkit-animation: dash 1s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
       animation: dash 1s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
-    .logo svg circle {
-      -webkit-transition: .25s;
-      transition: .25s; }
     .logo svg path {
       stroke-dasharray: 1000;
       -webkit-animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
-      animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
-      -webkit-transition: .25s;
-      transition: .25s; }
+      animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
       @media only screen and (min-width: 48em) {
         .logo svg path {
           -webkit-animation: none;
@@ -913,9 +907,10 @@ nav ul {
     .project__text {
       grid-template-columns: 1fr 1fr; } }
   .project__text * h4 {
+    text-transform: uppercase;
     color: #00347F;
-    font-size: 18px;
-    font-weight: 600; }
+    font-size: 26px;
+    letter-spacing: .2em; }
 
 .project__btn {
   display: inline-block; }
