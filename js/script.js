@@ -16,16 +16,10 @@ $(document).ready(function() {
     }
 
     // Initialize AOS
-    // AOS.init();
+    AOS.init();
 
     // Add class when first section is in center of viewport
     $(window).on('scroll', function() {
-        if ( $(window).scrollTop() > $('.intro').height() / 2.75 ) {
-            $('.main-nav, .logo').addClass("color-has-changed");
-        } else {
-            $('.main-nav, .logo').removeClass("color-has-changed");
-        }
-
         if( !$('.intro').isOnScreen() ) {
             $('.logo').addClass('is-fixed');
         } else {
