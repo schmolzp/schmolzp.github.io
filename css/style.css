@@ -444,6 +444,14 @@ body {
   line-height: 1.45;
   color: #000; }
 
+::-moz-selection {
+  background-color: #fd4345;
+  color: #FFF; }
+
+::selection {
+  background-color: #fd4345;
+  color: #FFF; }
+
 p {
   margin-bottom: 1.3em; }
 
@@ -549,6 +557,24 @@ nav ul {
     stroke-dashoffset: 1250; }
   to {
     stroke-dashoffset: 0; } }
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
 /*
  * Buttons
  */
@@ -559,6 +585,7 @@ nav ul {
   margin-bottom: 1em;
   padding: 0 50px;
   overflow: hidden;
+  z-index: 10;
   -webkit-transition: .3s linear;
   transition: .3s linear;
   font-weight: 600;
@@ -580,7 +607,7 @@ nav ul {
     bottom: 100%;
     left: 0;
     z-index: -1;
-    border-radius: 50px;
+    overflow: hidden;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -787,7 +814,7 @@ nav ul {
     height: 100%; }
   @media only screen and (min-width: 48em) {
     .intro {
-      height: 65vh; } }
+      height: 75vh; } }
   .no-touch .intro {
     background-attachment: fixed; }
 
@@ -798,6 +825,7 @@ nav ul {
       margin: 6em 0; } }
   .intro__content p {
     max-width: 600px;
+    color: #FFEFCA;
     font-size: 22px;
     line-height: 1.6;
     margin-right: auto;
@@ -823,7 +851,9 @@ nav ul {
   display: inline-block;
   z-index: 10;
   top: 15px;
-  left: 20px; }
+  left: 20px;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
   .logo svg {
     width: 55px;
     height: 55px; }
@@ -833,8 +863,8 @@ nav ul {
       animation: dash 1s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
     .logo svg path {
       stroke-dasharray: 1000;
-      -webkit-animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards;
-      animation: dash 1.5s 0.5s cubic-bezier(0.19, 0.54, 0.79, 0.91) forwards; }
+      -webkit-animation: dash 1.5s 0.65s cubic-bezier(0.19, 0.54, 0.79, 0.91) both;
+      animation: dash 1.5s 0.65s cubic-bezier(0.19, 0.54, 0.79, 0.91) both; }
       @media only screen and (min-width: 48em) {
         .logo svg path {
           -webkit-animation: none;
@@ -845,12 +875,18 @@ nav ul {
         height: 75px; } }
   @media only screen and (min-width: 48em) {
     .logo {
+      -webkit-animation: none;
+      animation: none;
       top: 25px;
       left: 50px; }
       .logo.is-fixed {
         position: fixed;
-        -webkit-animation: fadeIn .5s ease-in both;
-        animation: fadeIn .5s ease-in both; } }
+        left: 25px;
+        -webkit-animation: fadeIn .5s ease-in forwards;
+        animation: fadeIn .5s ease-in forwards; }
+      .logo.not-animating {
+        -webkit-animation: none;
+        animation: none; } }
 
 /* Sections
    ----------------------------------------------------*/
@@ -858,7 +894,7 @@ nav ul {
   text-align: center;
   background-color: #FFF;
   padding: 2em; }
-  @media only screen and (min-width: 48em) {
+  @media only screen and (min-width: 60em) {
     .section {
       padding: 2em 0; } }
 
@@ -871,11 +907,20 @@ nav ul {
 .section.mod-about {
   text-align: left;
   background-color: #e8e8e8; }
+  .section.mod-about p {
+    font-size: 18px;
+    line-height: 2;
+    color: #7a8494; }
+    @media only screen and (min-width: 48em) {
+      .section.mod-about p {
+        width: 60%; } }
 
 /* Projects
    ----------------------------------------------------*/
 .section.mod-portfolio {
   padding: 0; }
+  .section.mod-portfolio .project:last-child {
+    padding-bottom: 2.5em; }
 
 .project {
   margin-bottom: 3em; }

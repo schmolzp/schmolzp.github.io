@@ -6,7 +6,7 @@ $(document).ready(function() {
             siteController.scrollToSection();
             siteController.moveBGPhoto();
             siteController.aos();
-            siteController.logoFixed();
+            siteController.fixedLogo();
             siteController.centerNav();
         },
 
@@ -24,9 +24,8 @@ $(document).ready(function() {
 
             $mainNavLinks.on("click", function(e) {
                 e.preventDefault();
-                // $mainNavLinks.removeClass('is-active')
-                //             .closest('.main-nav')
-                //             .removeClass('is-open');
+                $mainNavLinks.closest('.main-nav')
+                            .removeClass('is-open');
                 $('.hamburger').toggleClass('is-active');
                 // $(this).addClass('is-active');
 
@@ -55,14 +54,18 @@ $(document).ready(function() {
             }
         },
 
-        logoFixed: function () {
+        fixedLogo: function () {
             // Add class when first section is in center of viewport
             $(window).on('scroll', function() {
-                if( !$('.intro').isOnScreen() && $('.logo').not('.is-fixed') ) {
+                if( $('.intro').isOnScreen() && $(window).scrollTop() ) {
+                    $('.logo').removeClass('is-fixed not-animating');
+                } else if( !$('.intro').isOnScreen() ) {
                     $('.logo').addClass('is-fixed');
-                } else {
-                    $('.logo').removeClass('is-fixed');
                 }
+            });
+
+            $('.logo').on('click', function() {
+                $(this).addClass('not-animating');
             });
         },
 
@@ -113,7 +116,7 @@ $(document).ready(function() {
             return false;
         } else {
             $('html, body').animate({
-                scrollTop: $( elem.attr('href') ).offset().top + 5
+                scrollTop: $( elem.attr('href') ).offset().top
             }, 1000);
         }
     }
