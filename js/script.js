@@ -116,7 +116,7 @@ $(document).ready(function() {
             return false;
         } else {
             $('html, body').animate({
-                scrollTop: $( elem.attr('href') ).offset().top
+                scrollTop: $( elem.attr('href') ).offset().top + 5
             }, 1000);
         }
     }

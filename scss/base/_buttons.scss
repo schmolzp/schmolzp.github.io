@@ -83,3 +83,19 @@
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+
+.btn.mod-resume {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  svg {
+    fill: $color-white;
+    height: 1.75em;
+    width: 1.75em;
+    margin-left: 1em;
+  }
+}
