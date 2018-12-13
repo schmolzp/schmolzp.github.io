@@ -1,0 +1,87 @@
+/* Projects
+   ----------------------------------------------------*/
+.section.mod-portfolio {
+    padding: 0;
+
+    .project:last-child {
+        padding-bottom: 2.5em;
+    }
+}
+
+.project {
+    margin-bottom: 3em;
+}
+    .project__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: rgba($color-primary, .15);
+        padding: 1.5em 0;
+    }
+
+    .project__content {
+        max-width: 850px;
+        padding: 3em 1.5em;
+        margin: 0 auto;
+    }
+
+    .project__img {
+        margin-bottom: 5em;
+    }
+
+    .project__text {
+        margin-bottom: 2em;
+    }
+
+
+    .project__text {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 75px;
+        text-align: left;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 75%;
+            height: 2px;
+            background-color: #e8e8e8;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+
+            @include respond-to(small) {
+                left: 50%;
+                top: 10%;
+                width: 2px;
+                height: 80%;
+            }
+        }
+
+        @include respond-to(small) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        * h4 {
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            color: $color-primary;
+            font-size: 26px;
+            letter-spacing: .2em;
+        }
+    }
+
+    .project__desc {
+
+        @include respond-to(small) {
+            
+        }
+    }
+
+
+    .project__btn {
+        display: inline-block;
+    }

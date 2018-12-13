@@ -2,7 +2,7 @@
    ----------------------------------------------------*/
 
 .main-nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -62,19 +62,6 @@
         }
     }
             
-    @include respond-to(small) {
-        &.color-has-changed:before {
-            -webkit-transform: translateX(-0);
-            transform: translateX(-0);
-            // -webkit-animation: slide-in-right .5s cubic-bezier(0.77,0.2,0.05,1.0) both;
-            //         animation: slide-in-right .5s cubic-bezier(0.77,0.2,0.05,1.0) both;
-        }
-
-        &.color-has-changed .main-nav__list-item a:hover:after,
-        &.color-has-changed .main-nav__list-item a.is-active:after {
-            background-color: $color-primary;
-        }
-    }
     @include respond-to(medium) {
         display: -webkit-box;
         display: -ms-flexbox;

@@ -11,6 +11,61 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/10years_screenshot_macbookpro15_front.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87169,
+		"inputAbbreviatedPath": "\/img\/10years_screenshot_macbookpro15_front.jpg",
+		"outputAbbreviatedPath": "\/img\/10years_screenshot_macbookpro15_front.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/find_yourself_screenshot_macbookpro15_front.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 168089,
+		"inputAbbreviatedPath": "\/img\/find_yourself_screenshot_macbookpro15_front.jpg",
+		"outputAbbreviatedPath": "\/img\/find_yourself_screenshot_macbookpro15_front.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/homepage_macbook.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80691,
+		"inputAbbreviatedPath": "\/img\/homepage_macbook.jpg",
+		"outputAbbreviatedPath": "\/img\/homepage_macbook.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/polar_explorer_macbook.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 90413,
+		"inputAbbreviatedPath": "\/img\/polar_explorer_macbook.jpg",
+		"outputAbbreviatedPath": "\/img\/polar_explorer_macbook.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/time_flies_screenshot_macbookpro15_front.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 237398,
+		"inputAbbreviatedPath": "\/img\/time_flies_screenshot_macbookpro15_front.jpg",
+		"outputAbbreviatedPath": "\/img\/time_flies_screenshot_macbookpro15_front.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/xBlue-Darkness.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -192,6 +247,22 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/scss\/layout\/_about.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/layout\/_about.scss",
+		"outputAbbreviatedPath": "\/scss\/css\/_about.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/scss\/layout\/_footer.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -256,15 +327,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/scss\/layout\/_portfolio.scss": {
+	"\/scss\/layout\/_projects.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scss\/layout\/_portfolio.scss",
-		"outputAbbreviatedPath": "\/scss\/css\/_portfolio.css",
+		"inputAbbreviatedPath": "\/scss\/layout\/_projects.scss",
+		"outputAbbreviatedPath": "\/scss\/css\/_projects.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

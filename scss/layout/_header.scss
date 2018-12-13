@@ -32,7 +32,7 @@
 
 
     @include respond-to(small) {
-        height: auto;
+        height: 75vh;
     }
 
     .no-touch & {
@@ -41,7 +41,6 @@
 }
 
 .intro__content {
-    margin: 6em 0 4em;
     z-index: 1;
     
     @include respond-to(small) {
@@ -50,6 +49,7 @@
 
     p {
         max-width: 600px;
+        color: $color-tertiary;
         font-size: 22px;
         line-height: 1.6;
         margin-right: auto;

@@ -12,6 +12,16 @@ body {
   color: $color-black;
 }
 
+::-moz-selection {
+  background-color: $color-secondary;
+  color: $color-white;
+}
+
+::selection {
+  background-color: $color-secondary;
+  color: $color-white;
+}
+
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
@@ -31,6 +41,11 @@ h3 {font-size: 2.25em;}
 
 h4 {font-size: 1.5em;}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 small, .font_small {font-size: 0.667em;}
 
 nav ul {
@@ -38,6 +53,6 @@ nav ul {
   list-style: none;
 }
 
-section > div {
-  margin: 2em 0;
-}
+// section > div {
+//   margin: 2em 0;
+// }

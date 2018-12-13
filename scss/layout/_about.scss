@@ -1,0 +1,16 @@
+/* About
+   ----------------------------------------------------*/
+.section.mod-about {
+    text-align: left;
+    background-color: #e8e8e8;
+
+    p {
+        font-size: 18px;
+        line-height: 2;
+        color: #7a8494;
+
+        @include respond-to(small) {
+            width: 60%;
+        }
+    }
+}
