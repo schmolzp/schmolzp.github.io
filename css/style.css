@@ -441,6 +441,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
+  text-rendering: optimizeLegibility;
   line-height: 1.45;
   color: #000; }
 
