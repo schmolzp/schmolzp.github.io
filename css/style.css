@@ -580,6 +580,7 @@ nav ul {
     bottom: 100%;
     left: 0;
     z-index: -1;
+    border-radius: 50px;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -899,14 +900,32 @@ nav ul {
   margin-bottom: 2em; }
 
 .project__text {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 50px;
+  grid-gap: 75px;
   text-align: left; }
+  .project__text:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 75%;
+    height: 2px;
+    background-color: #e8e8e8;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media only screen and (min-width: 48em) {
+      .project__text:after {
+        left: 50%;
+        top: 10%;
+        width: 2px;
+        height: 80%; } }
   @media only screen and (min-width: 48em) {
     .project__text {
       grid-template-columns: 1fr 1fr; } }
   .project__text * h4 {
+    margin-bottom: 1em;
     text-transform: uppercase;
     color: #00347F;
     font-size: 26px;

@@ -1,44 +1,94 @@
 /* Author: Peter Schmolze */
 $(document).ready(function() {
-    var movementStrength = 50,
-        height = movementStrength / $(window).height(),
-        width = movementStrength / $(window).width(),
-        $photo = $('.intro');
-        
-    if( $('html').hasClass('no-touch') ) {
-        $photo.mousemove(function(e){
-            var pageX = e.pageX - ($(window).width() / 2),
-                pageY = e.pageY - ($(window).height() / 2),
-                newvalueX = width * pageX * -1 - 25,
-                newvalueY = height * pageY * -1 - 50;
-            $photo.css("background-position", newvalueX+"px     "+newvalueY+"px");
-        });
-    }
+    var siteController = {
+        init: function() {
+            siteController.toggleMobileNav();
+            siteController.scrollToSection();
+            siteController.moveBGPhoto();
+            siteController.aos();
+            siteController.logoFixed();
+            siteController.centerNav();
+        },
 
-    // Initialize AOS
-    AOS.init();
+        toggleMobileNav: function () {
+            // Toggle mobile nav
+            $('.hamburger').on('click', function() {
+                $(this).toggleClass('is-active');
+                $('.main-nav').toggleClass('is-open');
+            });
+        },
 
-    // Add class when first section is in center of viewport
-    $(window).on('scroll', function() {
-        if( !$('.intro').isOnScreen() && $('.logo').not('.is-fixed') ) {
-            $('.logo').addClass('is-fixed');
-        } else {
-            $('.logo').removeClass('is-fixed');
+        scrollToSection: function () {
+            /* Smooth scroll to anchor href and bring in back to top button */
+            var $mainNavLinks = $('.main-nav a');
+
+            $mainNavLinks.on("click", function(e) {
+                e.preventDefault();
+                // $mainNavLinks.removeClass('is-active')
+                //             .closest('.main-nav')
+                //             .removeClass('is-open');
+                $('.hamburger').toggleClass('is-active');
+                // $(this).addClass('is-active');
+
+                scrollTo( $(this) );
+            });
+
+            $('.intro .btn, .logo').on('click', function() {
+                scrollTo( $(this) );
+            });
+        },
+
+        moveBGPhoto: function () {
+            var movementStrength = 50,
+                height = movementStrength / $(window).height(),
+                width = movementStrength / $(window).width(),
+                $photo = $('.intro');
+                
+            if( $('html').hasClass('no-touch') ) {
+                $photo.mousemove(function(e){
+                    var pageX = e.pageX - ($(window).width() / 2),
+                        pageY = e.pageY - ($(window).height() / 2),
+                        newvalueX = width * pageX * -1 - 25,
+                        newvalueY = height * pageY * -1 - 50;
+                    $photo.css("background-position", newvalueX+"px     "+newvalueY+"px");
+                });
+            }
+        },
+
+        logoFixed: function () {
+            // Add class when first section is in center of viewport
+            $(window).on('scroll', function() {
+                if( !$('.intro').isOnScreen() && $('.logo').not('.is-fixed') ) {
+                    $('.logo').addClass('is-fixed');
+                } else {
+                    $('.logo').removeClass('is-fixed');
+                }
+            });
+        },
+
+        aos: function() {
+            // Initialize AOS
+            AOS.init();
+        },
+
+        centerNav: function () {
+            // Get Nav height and center nav position
+            $(window).on('resize', function() {
+                var windowWidth = $(window).width(),
+                    halfIntro = $('.intro').height() / 2,
+                    halfNav = $('.main-nav').height() / 2,
+                    newHeight = halfIntro - halfNav;
+                if( windowWidth > 960 ) {
+                    $('.main-nav').css('top', newHeight + 25 + 'px').addClass('is-animating');
+                }
+            }).resize();
         }
-    });
+    };
 
-    // Get Nav height and center nav position
-    $(window).on('resize', function() {
-        var windowWidth = $(window).width(),
-            halfIntro = $('.intro').height() / 2,
-            halfNav = $('.main-nav').height() / 2,
-            newHeight = halfIntro - halfNav;
-        if( windowWidth > 960 ) {
-            $('.main-nav').css('top', newHeight + 25 + 'px').addClass('is-animating');
-        }
-    }).resize();
+    siteController.init();
 
-    /* Smooth scroll to anchor href and bring in back to top button */
+
+    // Utility Functions
     $.fn.isOnScreen = function(){
 		var win = $(window);
 		var viewport = {
@@ -55,48 +105,8 @@ $(document).ready(function() {
 		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     };
 
-    var $mainNavLinks = $('.main-nav a');
-
-    $mainNavLinks.on("click", function(e) {
-        e.preventDefault();
-        $mainNavLinks.removeClass('is-active')
-                      .closest('.main-nav')
-                      .removeClass('is-open');
-        $('.hamburger').toggleClass('is-active');
-        $(this).addClass('is-active');
-
-        scrollTo( $(this) );
-    });
-
-    $('.intro .btn, .logo').on('click', function() {
-        scrollTo( $(this) );
-    });
-
-    // Add is-active class on scroll to proper section
-    $(window).scroll(function() {
-        var scrollDistance = $(window).scrollTop();
-        $('.js-anchor').each(function(i) {
-				if (scrollDistance >= $(this).offset().top ) {
-						$mainNavLinks.removeClass('is-active');
-                        $mainNavLinks.eq(i).addClass('is-active');
-				} else if( $('.intro').isOnScreen() ) {
-                    $mainNavLinks.removeClass('is-active');
-                }
-                
-                if($(window).scrollTop() + $(window).height() === $(document).height()) {
-                    $mainNavLinks.removeClass('is-active');
-                    $mainNavLinks.eq(i).addClass('is-active');
-                }
-		});
-    });
     
-    // Toggle mobile nav
-    $('.hamburger').on('click', function() {
-        $(this).toggleClass('is-active');
-        $('.main-nav').toggleClass('is-open');
-    });
-
-
+    
     function scrollTo(elem) {
         if( elem.hasClass('js-anchor-bottom') ) {
             $('html, body').animate({scrollTop:$(document).height()}, 2000);
@@ -107,4 +117,22 @@ $(document).ready(function() {
             }, 1000);
         }
     }
+
+    // Add is-active class on scroll to proper section
+    // $(window).scroll(function() {
+    //     var scrollDistance = $(window).scrollTop();
+    //     $('.js-anchor').each(function(i) {
+    // 			if (scrollDistance >= $(this).offset().top ) {
+    // 					$mainNavLinks.removeClass('is-active');
+    //                     $mainNavLinks.eq(i).addClass('is-active');
+    // 			} else if( $('.intro').isOnScreen() ) {
+    //                 $mainNavLinks.removeClass('is-active');
+    //             }
+                
+    //             if($(window).scrollTop() + $(window).height() === $(document).height()) {
+    //                 $mainNavLinks.removeClass('is-active');
+    //                 $mainNavLinks.eq(i).addClass('is-active');
+    //             }
+    // 	});
+    // });
 });
