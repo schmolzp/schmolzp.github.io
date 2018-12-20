@@ -485,6 +485,16 @@ nav ul {
   padding: 0;
   list-style: none; }
 
+.hide-from-screen-reader {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
 /*
  * Animations
  */
@@ -581,7 +591,12 @@ nav ul {
  */
 .btn {
   position: relative;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   line-height: 50px;
   margin-bottom: 1em;
   padding: 0 50px;
@@ -627,6 +642,11 @@ nav ul {
   .btn:hover:after {
     -webkit-transition-delay: 0.175s;
     transition-delay: 0.175s; }
+  .btn svg {
+    fill: #FFF;
+    height: 1.75em;
+    width: 1.75em;
+    margin-left: 1em; }
 
 .btn.mod-ghost {
   color: #fd4345;
@@ -635,19 +655,6 @@ nav ul {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none; }
-
-.btn.mod-resume {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .btn.mod-resume svg {
-    fill: #FFF;
-    height: 1.75em;
-    width: 1.75em;
-    margin-left: 1em; }
 
 /* Main Navigation
    ----------------------------------------------------*/
@@ -978,9 +985,6 @@ nav ul {
     color: #00347F;
     font-size: 26px;
     letter-spacing: .2em; }
-
-.project__btn {
-  display: inline-block; }
 
 /* Footer
    ----------------------------------------------------*/
