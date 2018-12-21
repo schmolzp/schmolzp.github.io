@@ -71,7 +71,9 @@ $(document).ready(function() {
 
         aos: function() {
             // Initialize AOS
-            AOS.init();
+            AOS.init({
+                once: true
+            });
         },
 
         centerNav: function () {
