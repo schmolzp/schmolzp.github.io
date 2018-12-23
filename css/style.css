@@ -970,6 +970,8 @@ nav ul {
 
 .project__img {
   margin-bottom: 5em; }
+  .project__img.mod-award {
+    margin-bottom: 1em; }
 
 .project__text {
   margin-bottom: 2em; }
@@ -1028,7 +1030,7 @@ nav ul {
   .section.mod-contact h2 {
     font-size: calc(18px + (27 - 18)*(100vw - 320px)/(1200 - 320));
     color: #363636;
-    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5), 0px -1px 1px rgba(0, 0, 0, 0.75); }
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.75); }
     .section.mod-contact h2:after {
       content: none; }
   .section.mod-contact small {
