@@ -973,6 +973,24 @@ nav ul {
   .project__img.mod-award {
     margin-bottom: 1em; }
 
+.project__award {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 4em; }
+  .project__award p {
+    font-size: 14px; }
+  .project__award svg {
+    width: 1.75em;
+    height: 1.75em;
+    fill: #00347F; }
+
 .project__text {
   margin-bottom: 2em; }
 
