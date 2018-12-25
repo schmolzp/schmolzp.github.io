@@ -967,6 +967,8 @@ nav ul {
   padding: 3em 1.5em;
   margin: 0 auto;
   overflow-x: hidden; }
+  .project__content figure {
+    margin: 0; }
 
 .project__img {
   margin-bottom: 5em; }
