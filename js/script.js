@@ -84,7 +84,10 @@ $(document).ready(function() {
                     halfNav = $('.main-nav').height() / 2,
                     newHeight = halfIntro - halfNav;
                 if( windowWidth > 960 ) {
-                    $('.main-nav').css('top', newHeight + 25 + 'px').addClass('is-animating');
+                    $('.main-nav').css('top', newHeight + 'px').addClass('is-animating');
+                    console.log('running');
+                } else {
+                    $('.main-nav').css('top', '0').removeClass('is-animating');
                 }
             }).resize();
         }

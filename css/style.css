@@ -586,50 +586,6 @@ nav ul {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1; } }
-@-webkit-keyframes wobble-hor-top {
-  0%,
-  100% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
-  15% {
-    -webkit-transform: translateX(-30px) rotate(6deg);
-    transform: translateX(-30px) rotate(6deg); }
-  30% {
-    -webkit-transform: translateX(15px) rotate(-6deg);
-    transform: translateX(15px) rotate(-6deg); }
-  45% {
-    -webkit-transform: translateX(-15px) rotate(3.6deg);
-    transform: translateX(-15px) rotate(3.6deg); }
-  60% {
-    -webkit-transform: translateX(9px) rotate(-2.4deg);
-    transform: translateX(9px) rotate(-2.4deg); }
-  75% {
-    -webkit-transform: translateX(-6px) rotate(1.2deg);
-    transform: translateX(-6px) rotate(1.2deg); } }
-@keyframes wobble-hor-top {
-  0%,
-  100% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
-  15% {
-    -webkit-transform: translateX(-30px) rotate(6deg);
-    transform: translateX(-30px) rotate(6deg); }
-  30% {
-    -webkit-transform: translateX(15px) rotate(-6deg);
-    transform: translateX(15px) rotate(-6deg); }
-  45% {
-    -webkit-transform: translateX(-15px) rotate(3.6deg);
-    transform: translateX(-15px) rotate(3.6deg); }
-  60% {
-    -webkit-transform: translateX(9px) rotate(-2.4deg);
-    transform: translateX(9px) rotate(-2.4deg); }
-  75% {
-    -webkit-transform: translateX(-6px) rotate(1.2deg);
-    transform: translateX(-6px) rotate(1.2deg); } }
 /*
  * Buttons
  */
@@ -702,6 +658,11 @@ nav ul {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+.btn.mod-resume .btn__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 /* Main Navigation
    ----------------------------------------------------*/
 .main-nav {
@@ -711,7 +672,7 @@ nav ul {
   width: 100vw;
   height: 110vh;
   color: #FFEFCA;
-  z-index: 10;
+  z-index: 100;
   -webkit-transition: .5s;
   transition: .5s;
   overflow: hidden;
@@ -905,7 +866,7 @@ nav ul {
 .logo {
   position: absolute;
   display: inline-block;
-  z-index: 10;
+  z-index: 20;
   top: 15px;
   left: 20px;
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -1004,6 +965,7 @@ nav ul {
   font-size: 20px;
   font-weight: 600;
   background-color: rgba(0, 52, 127, 0.15);
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
   padding: 1.5em 0; }
 
 .project__content {
@@ -1045,7 +1007,7 @@ nav ul {
     min-width: 1.75em;
     height: 1.75em;
     fill: #00347F;
-    margin-right: 1em; }
+    margin-right: .5em; }
 
 .project__text {
   margin-bottom: 2em; }
@@ -1075,7 +1037,7 @@ nav ul {
   @media only screen and (min-width: 48em) {
     .project__text {
       grid-template-columns: 1fr 1fr; } }
-  .project__text * h4 {
+  .project__text h4 {
     margin-bottom: 1em;
     text-transform: uppercase;
     color: #00347F;
