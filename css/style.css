@@ -752,6 +752,9 @@ nav ul {
   .main-nav.is-open .main-nav__list {
     margin: 0;
     height: 100vh; }
+  @media only screen and (max-height: 625px) {
+    .main-nav__list {
+      height: 250px; } }
   @media only screen and (min-width: 60em) {
     .main-nav__list {
       -ms-flex-pack: distribute;
@@ -829,6 +832,9 @@ nav ul {
     left: 0;
     width: 100%;
     height: 100%; }
+  @media only screen and (max-device-width: 320px) {
+    .intro {
+      padding: 4em 2em 0; } }
   @media only screen and (min-width: 48em) {
     .intro {
       height: 85vh; } }
@@ -847,6 +853,9 @@ nav ul {
     line-height: 1.6;
     margin-right: auto;
     margin-left: auto; }
+  @media only screen and (max-device-width: 320px) {
+    .intro__content .btn {
+      padding: 0 40px; } }
 
 .intro__text {
   margin-bottom: 4em;
