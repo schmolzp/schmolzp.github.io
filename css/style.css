@@ -895,7 +895,7 @@ nav ul {
         .logo svg path {
           -webkit-animation: none;
           animation: none; } }
-    @media only screen and (min-width: 48em) {
+    @media only screen and (min-width: 60em) {
       .logo svg {
         width: 75px;
         height: 75px; } }
@@ -904,7 +904,7 @@ nav ul {
       -webkit-animation: none;
       animation: none;
       top: 25px;
-      left: 50px; }
+      left: 25px; }
       .logo.is-fixed {
         position: fixed;
         left: 25px;
@@ -920,6 +920,9 @@ nav ul {
       .logo.not-animating {
         -webkit-animation: none;
         animation: none; } }
+  @media only screen and (min-width: 48em) and (min-width: 60em) {
+    .logo {
+      left: 50px; } }
 
 /* Sections
    ----------------------------------------------------*/
