@@ -6,6 +6,7 @@ $(document).ready(function() {
             siteController.scrollToSection();
             siteController.moveBGPhoto();
             siteController.aos();
+            siteController.animateProjectTitleBG();
             siteController.fixedLogo();
             siteController.centerNav();
         },
@@ -76,6 +77,22 @@ $(document).ready(function() {
             });
         },
 
+        animateProjectTitleBG: function() {
+            $(window).on('scroll', function() {
+                var $projectTitle = $('.project__title');
+
+                $projectTitle.each(function(i, elem) {
+                    elem = $projectTitle.eq(i);
+
+                    if ( elem.isOnScreen()) {
+                        elem.addClass('is-animating');
+                    } else {
+                        elem.removeClass('is-animating');
+                    }
+                });
+            });
+        },
+
         centerNav: function () {
             // Get Nav height and center nav position
             $(window).on('resize', function() {
@@ -85,7 +102,6 @@ $(document).ready(function() {
                     newHeight = halfIntro - halfNav;
                 if( windowWidth > 960 ) {
                     $('.main-nav').css('top', newHeight + 'px').addClass('is-animating');
-                    console.log('running');
                 } else {
                     $('.main-nav').css('top', '0').removeClass('is-animating');
                 }
