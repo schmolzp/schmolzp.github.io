@@ -595,16 +595,6 @@ nav ul {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1; } }
-@-webkit-keyframes moveBG {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 350px 500px; } }
-@keyframes moveBG {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 350px 500px; } }
 /*
  * Buttons
  */
@@ -978,7 +968,7 @@ nav ul {
     color: #7a8494; }
     @media only screen and (min-width: 48em) {
       .section.mod-about p {
-        width: 60%; } }
+        width: 65%; } }
 
 /* Projects
    ----------------------------------------------------*/
@@ -996,16 +986,8 @@ nav ul {
   font-size: 20px;
   font-weight: 600;
   background-color: rgba(0, 52, 127, 0.15);
-  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.13'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%239C92AC' fill-opacity='0.09' fill-rule='evenodd'/%3E%3C/svg%3E");
   padding: 1.5em 0; }
-  .project__title.is-animating {
-    -webkit-animation: moveBG 50s infinite;
-    animation: moveBG 50s infinite; }
-    @media only screen and (min-width: 48em) {
-      .project__title.is-animating {
-        -webkit-animation-duration: 75s;
-        animation-duration: 75s; } }
 
 .no-touch .project__title {
   background-attachment: fixed; }

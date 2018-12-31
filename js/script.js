@@ -6,7 +6,7 @@ $(document).ready(function() {
             siteController.scrollToSection();
             siteController.moveBGPhoto();
             siteController.aos();
-            siteController.animateProjectTitleBG();
+            // siteController.animateProjectTitleBG();
             siteController.fixedLogo();
             siteController.centerNav();
         },
@@ -77,21 +77,21 @@ $(document).ready(function() {
             });
         },
 
-        animateProjectTitleBG: function() {
-            $(window).on('scroll', function() {
-                var $projectTitle = $('.project__title');
+        // animateProjectTitleBG: function() {
+        //     $(window).on('scroll', function() {
+        //         var $projectTitle = $('.project__title');
 
-                $projectTitle.each(function(i, elem) {
-                    elem = $projectTitle.eq(i);
+        //         $projectTitle.each(function(i, elem) {
+        //             elem = $projectTitle.eq(i);
 
-                    if ( elem.isOnScreen()) {
-                        elem.addClass('is-animating');
-                    } else {
-                        elem.removeClass('is-animating');
-                    }
-                });
-            });
-        },
+        //             if ( elem.isOnScreen()) {
+        //                 elem.addClass('is-animating');
+        //             } else {
+        //                 elem.removeClass('is-animating');
+        //             }
+        //         });
+        //     });
+        // },
 
         centerNav: function () {
             // Get Nav height and center nav position
