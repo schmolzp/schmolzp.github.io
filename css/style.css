@@ -944,7 +944,7 @@ nav ul {
       padding: 2em 0; } }
 
 .section__content {
-  max-width: 825px;
+  max-width: 850px;
   margin: 0 auto; }
 
 /* About
@@ -963,12 +963,46 @@ nav ul {
     opacity: .75;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
   .section.mod-about p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2;
-    color: #7a8494; }
+    color: #7a8494;
+    margin-top: 0; }
     @media only screen and (min-width: 48em) {
       .section.mod-about p {
-        width: 65%; } }
+        font-size: 18px; } }
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse; }
+  .about__text {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2; }
+    @media only screen and (min-width: 48em) {
+      .about__text {
+        margin-right: 4em; } }
+  .about__img {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    border-radius: 50%;
+    margin: 0 auto 1em;
+    text-align: center;
+    -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); }
+    @media only screen and (min-width: 48em) {
+      .about__img {
+        text-align: left; } }
+  @media only screen and (min-width: 48em) {
+    .about {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 /* Projects
    ----------------------------------------------------*/
@@ -999,6 +1033,9 @@ nav ul {
   overflow-x: hidden; }
   .project__content figure {
     margin: 0; }
+  @media only screen and (min-width: 48em) {
+    .project__content {
+      padding: 3em 0; } }
 
 .project__img {
   margin-bottom: 5em; }
