@@ -41,6 +41,9 @@
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
     background-color: #fd4345; }
+  @media only screen and (min-width: 48em) {
+    .hamburger {
+      top: 15px; } }
 
 .hamburger-box {
   width: 40px;
@@ -784,15 +787,20 @@ nav ul {
       animation-delay: .95s; }
   .main-nav.is-open .main-nav__list-item {
     font-size: 30px;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     -webkit-animation: slide-in-left 0.75s 0.15s cubic-bezier(0.77, 0.2, 0.05, 1) both;
     animation: slide-in-left 0.75s 0.15s cubic-bezier(0.77, 0.2, 0.05, 1) both; }
+    .main-nav.is-open .main-nav__list-item:last-child {
+      margin-bottom: 0; }
     .main-nav.is-open .main-nav__list-item:nth-child(2) {
       -webkit-animation-delay: .3s;
       animation-delay: .3s; }
     .main-nav.is-open .main-nav__list-item:nth-child(3) {
       -webkit-animation-delay: .45s;
       animation-delay: .45s; }
+    @media only screen and (min-width: 48em) {
+      .main-nav.is-open .main-nav__list-item {
+        margin-bottom: 4em; } }
   .main-nav__list-item a {
     position: relative;
     color: inherit;
