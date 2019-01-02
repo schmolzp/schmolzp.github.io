@@ -8,7 +8,7 @@
     width: 100vw;
     height: 110vh;
     color: #FFEFCA;
-    z-index: 10;
+    z-index: 100;
     -webkit-transition: .5s;
     transition: .5s;
     overflow: hidden;
@@ -119,6 +119,10 @@
             height: 100vh;
         }
 
+        @media only screen and (max-height: 625px) {
+            height: 250px;
+        }
+
         @include respond-to(medium) {
             -ms-flex-pack: distribute;
             justify-content: space-around;
@@ -146,9 +150,13 @@
 
             .main-nav.is-open & {
                 font-size: 30px;
-                margin-bottom: 1em;
+                margin-bottom: 1.5em;
                 -webkit-animation: slide-in-left .75s .15s cubic-bezier(0.77,0.2,0.05,1.0) both;
                     animation: slide-in-left .75s .15s cubic-bezier(0.77,0.2,0.05,1.0) both;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
 
                 &:nth-child(2) {
                     -webkit-animation-delay: .3s;
@@ -157,6 +165,10 @@
                 &:nth-child(3) {
                     -webkit-animation-delay: .45s;
                             animation-delay: .45s;
+                }
+
+                @include respond-to(small) {
+                    margin-bottom: 4em;
                 }
             }
 

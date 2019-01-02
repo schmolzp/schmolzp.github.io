@@ -13,6 +13,18 @@ body {
   color: $color-black;
 }
 
+a {
+  font-weight: 700;
+  color: $color-primary;
+  text-decoration: none;
+  -webkit-transition: .25s;
+  transition: .25s;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
 ::-moz-selection {
   background-color: $color-secondary;
   color: $color-white;

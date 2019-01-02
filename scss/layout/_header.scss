@@ -30,6 +30,9 @@
         height: 100%;
     }
 
+    @include respond-to(small-device) {
+        padding: 4em 2em 0;
+    }
 
     @include respond-to(small) {
         height: 85vh;
@@ -54,6 +57,13 @@
         line-height: 1.6;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    @include respond-to(small-device) {
+
+        .btn {
+            padding: 0 40px;
+        }
     }
 }
 
