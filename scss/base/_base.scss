@@ -25,6 +25,8 @@ a {
   }
 }
 
+@include scrollbars(.65em, $color-secondary);
+
 ::-moz-selection {
   background-color: $color-secondary;
   color: $color-white;
