@@ -57,6 +57,10 @@
       background-color: $hamburger-active-layer-color;
     }
   }
+
+  @include respond-to(small) {
+    top: 15px;
+  }
 }
 
 .hamburger-box {

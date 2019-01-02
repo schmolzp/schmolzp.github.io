@@ -4,7 +4,7 @@
 .logo {
     position: absolute;
     display: inline-block;
-    z-index: 10;
+    z-index: 20;
     top: 15px;
     left: 20px;
     -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -17,8 +17,8 @@
         &:hover {
             path {
                 stroke-dasharray: 1000;
-                -webkit-animation: dash 1s cubic-bezier(.19,.54,.79,.91) forwards;
-                        animation: dash 1s cubic-bezier(.19,.54,.79,.91) forwards;
+                -webkit-animation: dash 1s cubic-bezier(.19,.54,.79,.91) both;
+                        animation: dash 1s cubic-bezier(.19,.54,.79,.91) both;
             }
         }
 
@@ -33,7 +33,7 @@
             }
          }
         
-        @include respond-to(small) {
+        @include respond-to(medium) {
             // position: fixed;
             width: 75px;
             height: 75px;
@@ -49,6 +49,16 @@
             left: 25px;
             -webkit-animation: fadeIn .5s ease-in forwards;
                     animation: fadeIn .5s ease-in forwards;
+
+            circle {
+                fill: $color-primary;
+            }
+            path {
+                stroke: $color-secondary;
+                stroke-dashoffset: 1250;
+                -webkit-animation: dash 1s 4s cubic-bezier(.19, .54, .79, .91) both;
+                animation: dash 1s .4s cubic-bezier(.19, .54, .79, .91) both;
+            }
         }
 
         &.not-animating {
@@ -57,6 +67,10 @@
         }
         
         top: 25px;
-        left: 50px;
+        left: 25px;
+        
+        @include respond-to(medium) {
+            left: 50px;
+        }
     }
 }
