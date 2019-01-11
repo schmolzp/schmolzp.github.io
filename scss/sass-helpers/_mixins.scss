@@ -48,7 +48,7 @@ $breakpoints: (
 /// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
 /// @example scss - Scrollbar styling
 ///   @include scrollbars(.5em, slategray);
-@mixin scrollbars($size, $foreground-color, $background-color: rgba($color-white, .1)) {
+@mixin scrollbars($size, $foreground-color, $background-color: transparent) {
   // For Google Chrome
   ::-webkit-scrollbar {
       width:  $size;
@@ -56,11 +56,13 @@ $breakpoints: (
   }
 
   ::-webkit-scrollbar-thumb {
-      background: $foreground-color;
+    border-radius: 10px;
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background: $foreground-color;
   }
 
   ::-webkit-scrollbar-track {
-      background: $background-color;
+    background: $background-color;
   }
 
   // For Internet Explorer

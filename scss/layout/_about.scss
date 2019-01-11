@@ -38,27 +38,70 @@
             flex-direction: column-reverse;
 
     &__text {
-        -webkit-box-flex: 2;
-            -ms-flex: 2;
-                flex: 2;
+        position: relative;
         
         @include respond-to(small) {
-            margin-right: 4em;
+            margin-right: 2em;
         }
     }
 
     &__img {
+        width: 275px;
+        height: 275px;
         -ms-flex-item-align: start;
             align-self: flex-start;
-        margin: 0 auto 1em;
-        text-align: center;
-        // -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-        // clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        margin: 0 auto 2em;
+        shape-outside: circle(50%);
+
+        // &-filter {
+        //     position: relative;
+        //     width: 275px;
+        //     height: 275px;
+        //     margin: 0;
+        //     -webkit-filter: contrast(1.1) saturate(1.1);
+        //             filter: contrast(1.1) saturate(1.1);
+            
+        //     &:before,
+        //     &:after {
+        //         content: '';
+        //         display: block;
+        //         height: 100%;
+        //         width: 100%;
+        //         top: 0;
+        //         left: 0;
+        //         position: absolute;
+        //         pointer-events: none;
+        //     }
+            
+        //     &:before {
+        //         z-index: 2;
+        //     }
+            
+        //     &:after {
+        //         background: radial-gradient(circle at 45% 40%,rgba(255,255,255,.8),rgba(255,200,200,.6),#111 60%);
+        //         mix-blend-mode: overlay;
+        //         background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,91,154,.25)),to(rgba(230,193,61,.25)));
+        //         background: linear-gradient(to bottom,rgba(0,91,154,.25),rgba(230,193,61,.25));
+        //         background: -webkit-linear-gradient(top,rgba(0,91,154,.25),rgba(230,193,61,.25));
+        //         background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,91,154,.25)),to(rgba(230,193,61,.25)));
+        //         mix-blend-mode: screen;
+        //         opacity: .4;
+        //         z-index: 3;
+        //     }
+            
+        //     @include respond-to(medium) {
+        //         width: 300px;
+        //         height: 300px;
+        //     }
+        // }
 
         img { border-radius: 50%; }
 
         @include respond-to(small) {
-            text-align: left;
+            float: left;
+            width: 300px;
+            height: 300px;
+            margin: 0 35px 0 0;
         }
     }
 

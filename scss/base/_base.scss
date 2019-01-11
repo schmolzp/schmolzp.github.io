@@ -11,14 +11,15 @@ body {
   text-rendering: optimizeLegibility; 
   line-height: 1.45;
   color: $color-black;
+  overflow-x: hidden;
 }
 
 a {
   font-weight: 700;
   color: $color-primary;
   text-decoration: none;
-  -webkit-transition: .25s;
-  transition: .25s;
+  -webkit-transition: .25s color;
+  transition: .25s color;
 
   &:hover {
     color: $color-secondary;
@@ -26,11 +27,6 @@ a {
 }
 
 @include scrollbars(.65em, $color-secondary);
-
-::-moz-selection {
-  background-color: $color-secondary;
-  color: $color-white;
-}
 
 ::selection {
   background-color: $color-secondary;

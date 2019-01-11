@@ -16,10 +16,9 @@
     background-color: $color-primary;
     background-image: url('../img/xBlue-Darkness.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
     padding: 0 2em;
-
+    
     &:before {
         content: '';
         background-color: rgba($color-primary, .65);
@@ -29,13 +28,14 @@
         width: 100%;
         height: 100%;
     }
-
+    
     @include respond-to(small-device) {
         padding: 4em 2em 0;
     }
-
+    
     @include respond-to(small) {
-        height: 85vh;
+        background-size: cover;
+        height: 75vh;
     }
 
     .no-touch & {
