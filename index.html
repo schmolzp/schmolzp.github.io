@@ -9,68 +9,259 @@
   <meta name="keywords" content="webdesign, web development, UX, UI, HTML, CSS, Responsive Web Design">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  
+  <meta property="og:site_name" content="Peter Schmolze">
+  <meta property="og:title" content="Peter Schmolze">
+  <meta property="og:description" content="I'm a Columbia, SC based front-end/UI developer focused on creating user-friendly interactive mobile-first websites that will drive user engagement.">
+  <meta property="og:url" content="https://www.peterschmolze.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://schmolzp.github.io/img/peter_schmolze.jpg">
+  <meta name="twitter:site" content="@schmolzp">
 
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+
+  <script src="js/modernizr-custom.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131079280-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-131079280-1');
+  </script>
 </head>
 
-<body>
+<body id="top">
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+  <a href="#main-content" class="hide-for-screen-reader">Skip to Main Content</a>
 
   <header>
+    <button class="hamburger hamburger--collapse" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"><span class="hide-for-screen-reader">Open main navigation</span></span>
+        </span>
+    </button>
+    <a href="#top" class="logo">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.1 291.6">
+            <defs>
+                <clipPath id="clip-path" transform="translate(0 0)">
+                <circle cx="142" cy="142" r="142" fill="none"/>
+                </clipPath>
+            </defs>
+            <title>PS Logo</title>
+            <g>
+                <circle cx="142" cy="142" r="142" fill="#fd4345"/>
+                <g clip-path="url(#clip-path)">
+                <path d="M17.3,284.1c15.3-30.7,29.5-61.8,44.2-92.7,12.3-25.7,21.2-55.5,37.7-78.8,14-19.7,48.1-14,45.8,13.1-2.4,29.3-22.8,65.2-48.2,66.2-9.5.3-24.5-3.4-23.8-15.4s12.9-14.3,22-15.3c13.6-1.6,27.3-1.3,41-3.1,17.3-2.2,63.1-8.1,75-34.9,4-8.9,4.5-20.4-4-26.9s-21-6.7-29.5-.7-11.5,16.5-9.7,25c2.8,12.6,14.3,14.7,21.8,23.3,2.3,2.5,6.7,7.6,7.2,15a23.2,23.2,0,0,1-4.1,13.9c-6.6,9.7-18.3,11.2-21.6,11.6a36.8,36.8,0,0,1-24.5-6.1" transform="translate(0 0)" fill="none" stroke="#00347F" stroke-linecap="round" stroke-linejoin="round" stroke-width="15"/>
+                </g>
+            </g>
+        </svg>
+    </a>
       <nav class="main-nav">
           <ul class="main-nav__list">
-              <li class="main-nav__list-item"><a href="#porfolio">Portfolio</a></li>
               <li class="main-nav__list-item"><a href="#about">About Me</a></li>
-              <li class="main-nav__list-item"><a href="#contact">Contact</a></li>
+              <li class="main-nav__list-item"><a href="#portfolio-work">Portfolio</a></li>
+              <li class="main-nav__list-item"><a href="#contact" class="js-anchor-bottom">Contact</a></li>
           </ul>
       </nav>
   </header>
-  <main>
-      <section class="intro">
+  <main id="main-content" class="main-content">
+      <section class="intro" id="logo-anchor">
         <div class="intro__content">
             <div class="intro__text">
-                <h1 class="intro__header">Peter Schmolze</h1>
-                <p>I am a front-end/UI developer focused on creating user-friendly interactive mobile-first websites that will drive user engagement. </p>
+                <h1 class="intro__header">Hi, I'm Peter</h1>
+                <p>I'm a Columbia, SC based front-end/UI developer focused on creating user-friendly interactive mobile-first websites that will drive user engagement. </p>
             </div>
             <a href="#portfolio-work" class="btn mod-ghost">View My Work</a>
         </div>
       </section>
-      <section class="section mod-block js-scroll js-anchor" id="porfolio">
+      <section class="section mod-about js-anchor" id="about">
+            <div class="section__content">
+                <!-- <h2 class="section__header">About Me</h2> -->
+                <div class="about">
+                    <div class="about__text">
+                        <figure class="about__img">
+                            <img src="img/peter_schmolze.jpg" alt="Peter Schmolze">
+                        </figure>
+                        <p>Since graduating with a B.A. in Media Arts from the University of South Carolina in 2009, I have harnessed a passion for front-end web technologies. I am currently working as a front-end/UI developer at UofSC, where my interest in development and design merged. I love making a designer's mockup come to life by translating it into CSS, interaction, and animation to create an engaging user experience. Being primarily self-taught, I am driven, inherently curious, constantly learning, and thrive off of collaboration to make the final product stand out. </p>
+                        <p>Outside of work, you will find me listening to records with my lovely wife (Mollie), making my one-year-old son (Oscar) laugh, going on walks with our dog (Maggie) and trying not to get in our cat's (Mr. Phoebe) way. If you want to know more about me, just ask. </p>
+                        <a href="peter_schmolze_resume.pdf" class="btn mod-resume" download>Resume
+                            <div class="btn__icon" data-aos="fade-down" data-aos-duration="500" data-aos-offset="50" data-aos-once="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="download"><rect width="24" height="24" opacity="0"/><rect x="4" y="18" width="16" height="2" rx="1" ry="1"/><rect x="3" y="17" width="4" height="2" rx="1" ry="1" transform="rotate(-90 5 18)"/><rect x="17" y="17" width="4" height="2" rx="1" ry="1" transform="rotate(-90 19 18)"/><path d="M12 15a1 1 0 0 1-.58-.18l-4-2.82a1 1 0 0 1-.24-1.39 1 1 0 0 1 1.4-.24L12 12.76l3.4-2.56a1 1 0 0 1 1.2 1.6l-4 3a1 1 0 0 1-.6.2z"/><path d="M12 13a1 1 0 0 1-1-1V4a1 1 0 0 1 2 0v8a1 1 0 0 1-1 1z"/></g></g></svg>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            </div>
+      </section>
+      <!-- <section class="section js-scroll js-anchor" id="porfolio">
           <div class="section__content">
               <h2 class="section__header">Portfolio</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur esse id mollitia ex deleniti, fugit nulla odio ad doloremque repellat possimus, molestias at nihil, dolor ullam. Temporibus quos quibusdam id!</p>
           </div>
-      </section>
+      </section> -->
       <section class="section mod-portfolio" id="portfolio-work">
-          <div class="section__content">
-
-          </div>
-      </section>
-      <section class="section mod-block js-anchor" id="about">
-            <div class="section__content">
-                <h2 class="section__header">About Me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda mollitia quibusdam, dolorem soluta voluptate ipsa ex, tenetur architecto magnam optio ratione sint sapiente alias distinctio, dolor consequatur debitis. Recusandae, autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum maiores voluptatum obcaecati incidunt eveniet, fugit ullam? Assumenda minus sequi qui cum, quae illo excepturi sed illum quod, quas soluta!</p>
+        <div class="project">
+            <h2 class="project__title" id="project1-anchor">sc.edu</h2>
+            <div class="project__content">
+                <figure>
+                    <img src="img/homepage_macbook.jpg" alt="Screenshot of the website sc.edu" class="project__img mod-award" data-aos="fade-right" data-aos-anchor="#project1-anchor" data-aos-anchor-placement="bottom-center" data-aos-easing="ease-out-quart" data-aos-duration="750">
+                    <figcaption class="project__award mod-multiple">
+                        <div class="project__award-name">
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="award"><rect width="24" height="24" opacity="0"/><path d="M19 20.75l-2.31-9A5.94 5.94 0 0 0 18 8 6 6 0 0 0 6 8a5.94 5.94 0 0 0 1.34 3.77L5 20.75a1 1 0 0 0 1.48 1.11l5.33-3.13 5.68 3.14A.91.91 0 0 0 18 22a1 1 0 0 0 1-1.25zM12 4a4 4 0 1 1-4 4 4 4 0 0 1 4-4z"/></g></g></svg>
+                            <p>
+                            <b>AAF of the Midlands Silver Addy Award </b> - Websites, Consumer — Services
+                            </p>
+                        </div>
+                        <div class="project__award-name">
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="award"><rect width="24" height="24" opacity="0"/><path d="M19 20.75l-2.31-9A5.94 5.94 0 0 0 18 8 6 6 0 0 0 6 8a5.94 5.94 0 0 0 1.34 3.77L5 20.75a1 1 0 0 0 1.48 1.11l5.33-3.13 5.68 3.14A.91.91 0 0 0 18 22a1 1 0 0 0 1-1.25zM12 4a4 4 0 1 1-4 4 4 4 0 0 1 4-4z"/></g></g></svg>
+                            <p>
+                            <b>CASE District III Special Merit Award</b> - Total Website Design and Organization <br>
+                            </p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <div class="project__text">
+                    <div class="project__desc">
+                        <h3>Project</h3>
+                        <p>Prior to this project, the University of South Carolina had exhibited a non-responsive and bland website with poor navigation. This was a complete redesign and redevelopment of the University of South Carolina's web presence. Our main goal was to reorganize the site structure to align with our primary audience, prospective students. We also wanted to give it a more modern look along with a responsive design to make it user-friendly on mobile devices. Our team was also responsible for transitioning into a new content management system by creating several new page templates. </p>
+                    </div>
+                    <div class="project__role">
+                        <h3>My Role</h3>
+                        <p>Being the sole front-end/UI developer, my role was to build all new page templates by working closely with our UI/UX designer. At the time, we used the grid framework <a href="https://foundation.zurb.com/" target="_blank">Foundation</a> to lay out the site. I then used a modular approach to create components that can be reused throughout the site in different combinations. This allowed for more flexibility as needs for different page structures were constantly changing and being added. I also worked closely with our back-end developers and third-party vendors to implement the University's site search, calendar, and map.</p>
+                    </div>
+                </div>
             </div>
-      </section>
-      <section class="section mod-contact js-anchor" id="contact">
-          <div class="section__content">
-
-          </div>
+            <a href="https://sc.edu" class="project__btn btn" target="_blank" data-aos="zoom-in" data-aos-offset="100">See it Online
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-forward"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6a1.19 1.19 0 0 0 .09-.15c0-.05.05-.08.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36c0-.05-.05-.08-.07-.13a1.19 1.19 0 0 0-.09-.15l-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.64.23 1 1 0 0 0-.13 1.41L16.86 11H5a1 1 0 0 0 0 2z"/></g></g></svg>
+            </a>
+        </div>
+        <div class="project">
+            <h2 class="project__title" id="project2-anchor">Find Yourself</h2>
+            <div class="project__content">
+                <figure>
+                    <img src="img/find_yourself_screenshot_macbookpro15_front.jpg" alt="Screenshot of the Find Yourself homepage" class="project__img mod-award" data-aos="fade-left" data-aos-anchor="#project2-anchor" data-aos-anchor-placement="bottom-center" data-aos-easing="ease-out-quart" data-aos-duration="750">
+                    <figcaption class="project__award">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="award">
+                                    <rect width="24" height="24" opacity="0" />
+                                    <path d="M19 20.75l-2.31-9A5.94 5.94 0 0 0 18 8 6 6 0 0 0 6 8a5.94 5.94 0 0 0 1.34 3.77L5 20.75a1 1 0 0 0 1.48 1.11l5.33-3.13 5.68 3.14A.91.91 0 0 0 18 22a1 1 0 0 0 1-1.25zM12 4a4 4 0 1 1-4 4 4 4 0 0 1 4-4z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <p><b>Awwwards.com Honorable Mention</b></p>
+                    </figcaption>
+                </figure>
+                <div class="project__text">
+                    <div class="project__desc">
+                        <h3>Project</h3>
+                        <p>This was our first ever immersive interactive homepage that we did after the launch of the new sc.edu. We would do something like this every couple months to capture what it would be like to be a student on campus. We wanted to create levels of interactive for these types of homepages. The user could just look at it and get the message or they could dive deeper and scroll to get a fuller experience. </p>
+                    </div>
+                    <div class="project__role">
+                        <h3>My Role</h3>
+                        <p>As the sole developer, I built this using a scrolling parallax library that would give me more control over the various layers that needed to animate while scrolling. This was incredibly fun and challenging to work on as I had not done something like this before. The biggest challenge would have to be the performance to make sure there would be as minimal animation stuttering as possible to keep up with the refresh rate. Since there was such a concern for performance, this is <b>best viewed on a tablet in landscape mode and desktops</b> to get the full experience.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://sc.edu/homepage/2013_winter/" class="project__btn btn" target="_blank" data-aos="zoom-in" data-aos-offset="100">See it Online
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-forward"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6a1.19 1.19 0 0 0 .09-.15c0-.05.05-.08.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36c0-.05-.05-.08-.07-.13a1.19 1.19 0 0 0-.09-.15l-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.64.23 1 1 0 0 0-.13 1.41L16.86 11H5a1 1 0 0 0 0 2z"/></g></g></svg>
+            </a>
+        </div>
+        <div class="project">
+            <h2 class="project__title" id="project3-anchor">Polar Explorer</h2>
+            <div class="project__content">
+                <img src="img/polar_explorer_macbook.jpg" alt="Screenshot of the Polar Explorer story" class="project__img" data-aos="fade-right" data-aos-anchor="#project3-anchor" data-aos-anchor-placement="bottom-center" data-aos-easing="ease-out-quart" data-aos-duration="750">
+                <div class="project__text">
+                    <div class="project__desc">
+                        <h3>Project</h3>
+                        <p>This was the first of many online news stories where we abandoned the traditional news story template to create an engrossing experience for the reader. This particular story was about a faculty member's trip to Antarctica. While she was there she was able to capture her research with some outstanding video and photography. </p>
+                    </div>
+                    <div class="project__role">
+                        <h3>My Role</h3>
+                        <p>I collaborated and worked alongside our sole designer to make sure that her vision for the story was seen through. I built an entirely new template that would take advantage of a full-width design that accompanied auto-playing (no audio) background videos. </p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://sc.edu/uofsc/posts/2017/07/polar_explorer.php" class="project__btn btn" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-offset="100">See it Online
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-forward"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6a1.19 1.19 0 0 0 .09-.15c0-.05.05-.08.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36c0-.05-.05-.08-.07-.13a1.19 1.19 0 0 0-.09-.15l-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.64.23 1 1 0 0 0-.13 1.41L16.86 11H5a1 1 0 0 0 0 2z"/></g></g></svg>
+            </a>
+        </div>
+        <div class="project">
+            <h2 class="project__title" id="project4-anchor">Time Flies</h2>
+            <div class="project__content">
+                <img src="img/time_flies_screenshot_macbookpro15_front.jpg" alt="Screenshot of the Time Flies homepage" class="project__img" data-aos="fade-left" data-aos-anchor="#project4-anchor" data-aos-anchor-placement="bottom-center" data-aos-easing="ease-out-quart" data-aos-duration="750">
+                <div class="project__text">
+                    <div class="project__desc">
+                        <h3>Project</h3>
+                        <p>For every May commencement, the University of South Carolina would align the homepage with an experimental and creative interactive experience that would highlight the last four years. That year, the idea was to give the user the feeling of time flying by having polaroid photos being dropped on the screen faster and faster. Once again, this homepage worked on multiple levels. If the user only looked at the page they got the overall message. The user could then click on the button that would trigger all the photos flying in. Once completed, the user could then drag all the photos around the page to see every photo if they wanted.</p>
+                    </div>
+                    <div class="project__role">
+                        <h3>My Role</h3>
+                        <p>Being the sole developer on the team, my task was to build out this concept while also making sure the idea met our deliberate intention and to give insight on what was feasible. Since I had just come back from a conference where I had learned more in-depth about the <a href="https://greensock.com/" target="_blank" rel="noopener noreferrer">Greensock Animation Platform (GSAP)</a>, I decided to go with that as my tool to build out the photo animations. The results were met with excellent feedback since it not only appealed to our main audience, prospective students by showing what it would be like to be on campus, but alumni and current students as well.</p>
+                    </div>
+                </div>
+            </div>  
+            <a href="https://sc.edu/homepage/2016_graduation/" class="project__btn btn" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-offset="100">See it Online
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-forward"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6a1.19 1.19 0 0 0 .09-.15c0-.05.05-.08.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36c0-.05-.05-.08-.07-.13a1.19 1.19 0 0 0-.09-.15l-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.64.23 1 1 0 0 0-.13 1.41L16.86 11H5a1 1 0 0 0 0 2z"/></g></g></svg>
+            </a>
+        </div>
+        <div class="project">
+            <h2 class="project__title" id="project5-anchor">10 Years of Transformation</h2>
+            <div class="project__content">
+                <img src="img/10years_screenshot_macbookpro15_front.jpg" alt="Screenshot of the 10 Years page" class="project__img" data-aos="fade-right" data-aos-anchor="#project5-anchor" data-aos-anchor-placement="bottom-center" data-aos-easing="ease-out-quart" data-aos-duration="750">
+                <div class="project__text">
+                    <div class="project__desc">
+                        <h3>Project</h3>
+                        <p>To coincide with the University of South Carolina's President's 10 year anniversary, our team was tasked with creating an online representation of an infographic that was designed in-house. It needed to showcase all of the President's milestones throughout his tenure along with being an interactive experience for the user. </p>
+                    </div>
+                    <div class="project__role">
+                        <h3>My Role</h3>
+                        <p>Once again, I reached for <a href="https://greensock.com/" target="_blank" rel="noopener noreferrer">GSAP</a> since we were wanting to animate the SVG illustrations on hover. I almost always reach for GSAP when it comes to timeline or SVG animation. It is so easy to work with and has a huge emphasis on performance. I worked very closely with the print designer who illustrated the infographic to come up with animations that would draw the user into clicking on each milestone. Since there was going to be additional content for each milestone, I decided to go with placing it in a lightbox/modal that would allow for larger amounts of text.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://sc.edu/about/our_leadership/president/ten_years_of_transformation/" class="project__btn btn" target="_blank" data-aos="zoom-in" data-aos-offset="100">See it Online
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-forward"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6a1.19 1.19 0 0 0 .09-.15c0-.05.05-.08.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36c0-.05-.05-.08-.07-.13a1.19 1.19 0 0 0-.09-.15l-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.64.23 1 1 0 0 0-.13 1.41L16.86 11H5a1 1 0 0 0 0 2z"/></g></g></svg>
+            </a>
+        </div>
       </section>
   </main>
+  <footer class="section mod-contact js-anchor" id="contact">
+    <div class="section__content">
+      <h2 class="section__header">Wanna get in touch?</h2>
+      <ul class="contact-list">
+        <li>
+            <a href="mailto:schmolzp@gmail.com" class="contact-list__link" rel="noopener noreferrer">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" fill="#00347F" viewBox="0 0 24 24"><title>Email</title><g data-name="Layer 2"><g data-name="email"><rect width="24" height="24" opacity="0"/><path d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm0 2l-6.5 4.47a1 1 0 0 1-1 0L5 6z"/></g></g></svg>
+             </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/schmolzp" target="_blank" class="contact-list__link" rel="noopener noreferrer">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00347F"><title>Twitter</title><g data-name="Layer 2"><g data-name="twitter"><polyline points="0 0 24 0 24 24 0 24" opacity="0"/><path d="M8.08 20A11.07 11.07 0 0 0 19.52 9 8.09 8.09 0 0 0 21 6.16a.44.44 0 0 0-.62-.51 1.88 1.88 0 0 1-2.16-.38 3.89 3.89 0 0 0-5.58-.17A4.13 4.13 0 0 0 11.49 9C8.14 9.2 5.84 7.61 4 5.43a.43.43 0 0 0-.75.24 9.68 9.68 0 0 0 4.6 10.05A6.73 6.73 0 0 1 3.38 18a.45.45 0 0 0-.14.84A11 11 0 0 0 8.08 20"/></g></g></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/peter-schmolze/" target="_blank" class="contact-list__link" rel="noopener noreferrer">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00347F"><title>Linked In</title><g data-name="Layer 2"><g data-name="linkedin"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path d="M15.15 8.4a5.83 5.83 0 0 0-5.85 5.82v5.88a.9.9 0 0 0 .9.9h2.1a.9.9 0 0 0 .9-.9v-5.88a1.94 1.94 0 0 1 2.15-1.93 2 2 0 0 1 1.75 2v5.81a.9.9 0 0 0 .9.9h2.1a.9.9 0 0 0 .9-.9v-5.88a5.83 5.83 0 0 0-5.85-5.82z"/><rect x="3" y="9.3" width="4.5" height="11.7" rx=".9" ry=".9"/><circle cx="5.25" cy="5.25" r="2.25"/></g></g></svg>
+            </a>
+        </li>
+      </ul>
+      <small>&copy; 2019 Peter Schmolze</small>
+    </div>
+ </footer>
   
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-  <!-- <script src="js/plugins.js"></script> -->
-  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+  <script src="js/min/plugins-min.js"></script>
+  <script src="js/min/script-min.js" async></script>
 </body> 
 
 </html>
