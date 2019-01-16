@@ -37,6 +37,10 @@
         background-size: cover;
         height: 75vh;
     }
+    
+    @include respond-to(large) {
+        background-size: 110%;
+    }
 
     .no-touch & {
         background-attachment: fixed;
